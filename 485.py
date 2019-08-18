@@ -27,3 +27,14 @@ class Solution:
             s -= nums[i]
         return s
 # ---------- 208ms, 15.2MB ---------- #
+
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        length = len(nums)
+        s = 0
+        
+        for i in range(length):
+            s += i - nums[i]
+        
+        return s + length
+# ---------- 204ms, 15MB ---------- #
